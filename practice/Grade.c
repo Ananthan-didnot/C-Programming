@@ -13,7 +13,7 @@ int main(){
   char name[20];
   
   printf("Enter the name: ");
-  fgets(name,20,stdin);
+  fgets(name,sizeof(name),stdin);
   printf("Enter the roll number: ");
   scanf("%d",&rollNo);
   printf("Enter the maximum mark of all subject: ");
@@ -29,18 +29,18 @@ int main(){
   double percentage=((double)total/ (double)max)*100;
   
   if(percentage>=75){
-   printf("%s\n%d",name,rollNo);
-   printf("You have %.2lf\%",percentage);
+   printf("%s%d\n",name,rollNo);
+   printf("You have %.2lf%%",percentage);
    printf("\nYou have First Class with Distinction!");
   }
   else if (percentage>=60 && percentage<75){
-    printf("%s%d",name,rollNo);
-    printf("You have %.2lf\%",percentage);
+    printf("%s%d\n",name,rollNo);
+    printf("You have %.2lf%%",percentage);
     printf("\nYou have First Class!");
     }
   else{
-   printf("%s\n%d",name,rollNo);
-   printf("You have %.2lf\%",percentage);
+   printf("%s\n%d\n",name,rollNo);
+   printf("You have %.2lf%%",percentage);
    printf("\nYou have Second Class!");
   }
   
