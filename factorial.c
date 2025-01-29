@@ -13,15 +13,19 @@ int main(){
     scanf("%d",&num);
     int number=num;
     
-    if(num<0){
-    printf("Number should be greater than zero");
-    }
-    
+  if(num>0){
     while(num>0){
     factorial*=num;
     num--;
     }
-  printf("Factorial of %d = %llu",number,factorial);
+    printf("Factorial of %d = %llu",number,factorial);
+    
+    }else{
+    printf("Number should be greater than zero");
+    }
+    
+    
+    
 
 return 0;
 }
