@@ -23,6 +23,8 @@ int main(){
         
     }
     fclose(fp1);
+    fclose(fp2);
+    fclose(fp3);
 
     return 0;
 }
